@@ -1,0 +1,76 @@
+.footer {
+    padding: 30px 4%;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center; /* Center-align text for smaller screens */
+}
+
+.footer-icons {
+    display: flex;
+    justify-content: center; /* Center-align icons */
+    gap: 20px;
+    margin: 40px 0;
+}
+
+.footer-icons img {
+    width: 30px;
+    cursor: pointer;
+}
+
+.footer ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Flexible columns */
+    gap: 15px;
+    margin-bottom: 30px;
+    list-style: none;
+    padding: 0; /* Remove default padding */
+    text-align: left; /* Align text for better readability */
+}
+
+.copyright-text {
+    color: gray;
+    font-size: 14px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .footer {
+        padding: 20px 3%;
+    }
+
+    .footer-icons {
+        gap: 15px;
+    }
+
+    .footer-icons img {
+        width: 25px; /* Reduce icon size */
+    }
+
+    .footer ul {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Adjust column width */
+    }
+
+    .copyright-text {
+        font-size: 12px; /* Smaller font for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-icons {
+        flex-wrap: wrap; /* Allow icons to wrap */
+        gap: 10px;
+    }
+
+    .footer-icons img {
+        width: 20px; /* Further reduce icon size */
+    }
+
+    .footer ul {
+        grid-template-columns: 1fr; /* Single column for narrow screens */
+        text-align: center; /* Center-align items */
+    }
+
+    .copyright-text {
+        font-size: 10px; /* Reduce font size further */
+    }
+}
